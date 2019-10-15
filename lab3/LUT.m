@@ -1,0 +1,11 @@
+function LUT(obraz, przekodowanie)
+    subplot(1,3,1)
+    imshow(obraz)
+    title("oryginał")
+    subplot(1,3,2)
+    imshow(intlut(obraz, przekodowanie))
+    title("obraz przeksztalcony")
+    subplot(1,3,3)
+    plot(przekodowanie)
+    title("wykres przekodowania")
+end
