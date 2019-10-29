@@ -1,0 +1,10 @@
+clc; close all; clearvars;
+
+i1 = imread('rice.png');
+[X, Y] = size(i1);
+
+for i = 1:X
+    for j = 1:Y
+        m = mean:T(i, j, 7, i1, X, Y);
+    end
+end
