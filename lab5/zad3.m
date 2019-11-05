@@ -10,7 +10,7 @@ subplot(2,1,2)
 imhist(i1)
 
 %% 1.3
-i2 = i1 > 160 & i1 < 205;
+i2 = i1 > 190 & i1 < 220;
 %i2 = uint8(i2);
 
 figure(2)
