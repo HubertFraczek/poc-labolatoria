@@ -1,0 +1,49 @@
+close all; clearvars; clc;
+
+i1 = imread("ertka.bmp");
+
+sq = strel('square', 3);
+di = strel('diamond', 3);
+
+sqi1 = imerode(i1, sq);
+dii1 = imerode(i1, di);
+
+figure;
+subplot(3,1,1)
+imshow(i1)
+subplot(3,1,2)
+imshow(i1)
+subplot(3,1,3)
+imshow(dii1)
+
+
+sqi1 = imerode(sqi1, sq);
+sqi1 = imerode(sqi1, sq);
+sqi1 = imerode(sqi1, sq);
+
+figure;
+imshow(sqi1)
+
+i2 = imread('buzka.bmp');
+
+m = [1 1 0; 0 0 0];
+
+mi2 = imerode(i2, m);
+
+figure;
+subplot(2,1,1)
+imshow(i2)
+subplot(2,1,2)
+imshow(mi2)
+
+dii1 = imdilate(i1, sq);
+
+figure;
+subplot(3,1,1)
+imshow(i1)
+subplot(3,1,2)
+imshow(imerode(i1, sq))
+subplot(3,1,3)
+
+imshow(dii1)
+
