@@ -1,6 +1,7 @@
 close all; clearvars; clc;
 
 i1 = imread("ertka.bmp");
+i = imread('hom.bmp');
 
 sq = strel('square', 3);
 di = strel('diamond', 3);
@@ -61,4 +62,16 @@ subplot(3,2,6)
 imshow(imerode(imclose(i1, sq), sq))
 title('zad 11')
 
+SE1 = [0 1 0;1 1 1;0 1 0];
+SE2 = [1 0 1;0 0 0;1 0 1];
 
+image = i;
+imHitmiss = bwhitmiss(image, SE1, SE2);
+
+figure;
+subplot(1,2,1);
+imshow(image);
+title('original');
+subplot(1,2,2);
+imshow(imHitmiss);
+title('detecc');
