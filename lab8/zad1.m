@@ -13,12 +13,11 @@ figure;
 subplot(3,1,1)
 imshow(i1)
 subplot(3,1,2)
-imshow(i1)
+imshow(sqi1)
 subplot(3,1,3)
 imshow(dii1)
 
 
-sqi1 = imerode(sqi1, sq);
 sqi1 = imerode(sqi1, sq);
 sqi1 = imerode(sqi1, sq);
 
