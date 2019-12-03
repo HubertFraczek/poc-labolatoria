@@ -3,7 +3,7 @@ clear; clc; close all;
 i1 = imread("lab112.png");
 
 figure;
-i1 = im2bw(i1, 40/255);
+i1 = imbinarize(i1, 40/255);
 
 sq = strel('square', 10);
 i1 = imclose(i1, sq);
