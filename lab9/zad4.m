@@ -4,11 +4,8 @@ i1 = imread("lab112.png");
 
 figure;
 i1 = im2bw(i1, 40/255);
-i1 = not(i1);
-i1 = imclearborder(i1);
-i1 = not(i1);
 
-sq = strel('square', 5);
+sq = strel('square', 10);
 i1 = imclose(i1, sq);
 imshow(i1)
 
